@@ -15,11 +15,20 @@ public class Sound {
 
     private String mAssetPath;
     private String mName;
+    private Integer mSoundId;
 
     public Sound(String path){
         mAssetPath = path;
         String[] componentsOfPath = path.split("/");
         String fileName = componentsOfPath[componentsOfPath.length - 1];
         mName = fileName.replace(".wav","");
+    }
+
+    public Integer getSoundId() {
+        return mSoundId;
+    }
+
+    public void setSoundId(Integer soundId) {
+        mSoundId = soundId;
     }
 }
